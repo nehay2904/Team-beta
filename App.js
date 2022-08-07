@@ -1,13 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BottomTab from './components/BootomTab';
+
+
+
+
+
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  const Stack = createNativeStackNavigator();
+  
+  return(
+       <BottomTab />
+   
   );
+  
 }
 
 const styles = StyleSheet.create({
