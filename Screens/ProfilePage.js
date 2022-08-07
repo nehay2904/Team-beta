@@ -16,13 +16,13 @@ const ProfilePage = () => {
       <View style={styles.maincontainer}>
         <View style={styles.container}>
           <View style={styles.header}>
-            
+
             <Text style={styles.heading}>My Profile</Text>
             <Ionicons name='pencil' color={"white"} style={{ marginBottom: 20 }} size={35} />
           </View>
           <Image source={ProfilePicture} style={styles.ProfilePicture} />
           <Text style={styles.profilename}>Neha Yednurwar</Text>
-          <Text style={styles.profilename}>20 years</Text>
+          <Text style={styles.profilename}>21 years</Text>
           <Text style={styles.profilebio}>When you type a password to sign in, create an account, or change your password, npm will check if the password you entered is considered weak according to datasets like HaveIBeenPwned. The password may be</Text>
           <View style={styles.ViewPicPost}>
             <Image style={styles.PicPost} source={PostPictureOne} />
