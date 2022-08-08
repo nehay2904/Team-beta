@@ -24,7 +24,7 @@ const ProfilePage = () => {
           <Image source={ProfilePicture} style={styles.ProfilePicture} />
           <Text style={styles.profilename}>Neha Yednurwar</Text>
           <Text style={styles.profilename}>21 years</Text>
-          <Text style={styles.profilebio}>Whene nccount, or change your password, npm will check if the password you entered is considered weak according to datasets like HaveIBeenPwned. The password may be</Text>
+          <Text style={styles.profilebio}>Whene nccont, or change your password, npm will check if the password you entered is considered weak according to datasets like HaveIBeenPwned. The password may be</Text>
           <View style={styles.ViewPicPost}>
             <Image style={styles.PicPost} source={PostPictureOne} />
             <Image style={styles.PicPost} source={PostPictureTwo} />
