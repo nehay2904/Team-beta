@@ -1,14 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native';
-
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomTab from './components/BootomTab';
 
 
-
-
-
 export default function App() {
-  const Stack = createNativeStackNavigator();
   
   return(
        <BottomTab />

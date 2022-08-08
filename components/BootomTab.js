@@ -1,6 +1,6 @@
 import React from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
-// import Ionicons from 'react-native-vector-icons/Ionicons'
+
 import ChatScreen from '../Screens/ChatScreen';
 import FindScreen from '../Screens/FindScreen';
 import SwipeScreen from '../Screens/Swiper';
@@ -9,6 +9,7 @@ import Swiper from '../Screens/Swiper';
 import Main from '../src/Main';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import ProfilePage from '../Screens/ProfilePage';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
