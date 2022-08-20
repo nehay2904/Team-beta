@@ -9,16 +9,15 @@ import Swiper from '../Screens/Swiper';
 import Main from '../src/Main';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import ProfilePage from '../Screens/ProfilePage';
-import ComponentCon from './ComponentCon';
 import MyStack from '../Navigation/ProfileNavigation';
 
 const Tab = createMaterialBottomTabNavigator();
 
 
 
-const BottomTab = () => {
+const BottomTab = ({navigation, route}) => {
     return (
-        <NavigationContainer>
+      
         <Tab.Navigator initialRouteName='Profie'  barStyle={{ backgroundColor: '#0F0F0F', height: 70, paddingTop: 10}} shifting={true} screenOptions={{ style: { position: 'absolute',backgroundColor: 'black', height: 90,} }}>
 
             <Tab.Screen name="My Profile" component={MyStack} options={{ 
@@ -65,7 +64,6 @@ const BottomTab = () => {
             }
             } />
         </Tab.Navigator>
-        </NavigationContainer>
     )
 }
 

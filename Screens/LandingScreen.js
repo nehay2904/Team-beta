@@ -2,7 +2,7 @@
 import { Text, View , StyleSheet, Button, Image } from 'react-native';
 import Logo from '../Images/logo.png';
 
-function LandingScreen({ navigation }) {
+function LandingScreen({navigation, route}) {
 
   
   return (
@@ -10,7 +10,9 @@ function LandingScreen({ navigation }) {
       <Image source={Logo}/>
       <Text style={styles.welcomeText}>Swipe</Text>
       <Text style={styles.SubText}>Find your perfect choice</Text>
-      <Button style={styles.button} title='Signup'  color="#87000B"></Button>
+      <Button style={styles.button} title='Signup'  color="#87000B"  onPress={() =>
+        navigation.navigate('ScreenOne', { name: 'cancel' })
+      }></Button>
     </View> 
   );
   }
