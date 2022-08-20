@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ProfilePage from './ProfilePage';
 import ProfilePic from '../Images/PicFour.jpg'
-const ProfileUpdateScreen = () => {
+const ProfileUpdateScreen = ({route}) => {
 
 
 
@@ -13,7 +13,7 @@ const ProfileUpdateScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
       <ScrollView>
-
+      <Text>{route.params.name}</Text>
         <View style={{ display:"flex", flexDirection:'row', justifyContent:'space-between' , marginHorizontal:50, marginVertical:30}}>
           <TouchableOpacity><Text style={{ color: 'white'}}>Cancel</Text></TouchableOpacity>
           <TouchableOpacity><Text style={{ color: 'white' }}>Edit</Text></TouchableOpacity>

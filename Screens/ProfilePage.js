@@ -8,7 +8,7 @@ import Ionicons from '@expo/vector-icons/FontAwesome'
 
 
 
-const ProfilePage = () => {
+const ProfilePage = ({navigation}) => {
 
 
   return (
@@ -19,7 +19,9 @@ const ProfilePage = () => {
           <View style={styles.header}>
 
             <Text style={styles.heading}>My Profile</Text>
-            <Ionicons name='pencil' color={"white"} style={{ marginBottom: 20 }} size={35} />
+            <Ionicons name='pencil' color={"white"} style={{ marginBottom: 20 }} size={35}  onPress={() =>
+        navigation.navigate('ProfileUpdateScreen', { name: 'cancel' })
+      }/>
           </View>
           <Image source={ProfilePicture} style={styles.ProfilePicture} />
           <Text style={styles.profilename}>Neha Yednurwar</Text>
