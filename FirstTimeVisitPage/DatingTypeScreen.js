@@ -1,27 +1,51 @@
-import { StyleSheet, Text, View, Button  } from 'react-native'
+import { StyleSheet, Text, View, Button, TextInput  } from 'react-native'
 import React from 'react'
+import DatingTypeInput from '../components/DatingTypeInput'
 
-const DatingType = ({navigation, route}) => {
+const DatingType = ({route, navigation}) => {
   return (
-    <View  style={styles.container}>
-      <Text>DatingType</Text>
-      <Text>{route.params.name}</Text>
-      <Button title='Next' onPress={() =>
-        navigation.navigate('ScreenTwo', { name: 'cancel' })
+    <View style={styles.container}>
+       <View style={styles.info}>
+         <Text style={{display:"none"}}>{route.params.name}</Text>
+         <Text style={{fontSize:25 , textAlign:'center'}}>What is your Dating Type ?</Text>
+         <DatingTypeInput />
+       </View>
+       <View style={styles.NextButton}>
+          <Button title='Next' color={"#A60A3D"} onPress={() =>
+        navigation.navigate('SexualPreference', { name: 'cancel' })
       }/>
+       </View>
     </View>
   )
 }
 
-export default DatingType
+export default DatingType;
 
 
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+   container:{
+    top:80,
+    display:'flex',
+    flexDirection:'column',
+    height:"85%",
+    justifyContent:'space-between',
+    marginHorizontal:30
+   
+   },
+   info:{
+    
+   },
+   NextButton:{
+    alignItems:'flex-end',
+   
+    
+   },
+   Input:{
+     borderColor:'gray',
+     borderWidth:2,
+     marginTop:20,
+     borderRadius:7,
+     padding:10
+   }
 });

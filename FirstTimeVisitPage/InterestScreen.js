@@ -2,15 +2,18 @@ import { StyleSheet, Text, View, Button, TextInput  } from 'react-native'
 import React from 'react'
 import InterestInput from '../components/InterestInput'
 
-const InterestScreen= () => {
+const InterestScreen= ({route, navigation}) => {
   return (
     <View style={styles.container}>
        <View style={styles.info}>
+       <Text style={{display:"none"}}>{route.params.name}</Text>
          <Text style={{fontSize:25 , textAlign:'center'}}>Tell Your Interest</Text>
          <InterestInput />
        </View>
        <View style={styles.NextButton}>
-          <Button title='Next' color={"red"} />
+          <Button title='Next' color={"#A60A3D"}   onPress={() =>
+        navigation.navigate('DatingType', { name: 'cancel' })
+      }/>
        </View>
     </View>
   )

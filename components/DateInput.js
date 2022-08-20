@@ -143,8 +143,7 @@ function DateInput() {
  const [selectedYear, setselectedTYear] = useState('')
  
   return (
-    <View style={{ top:80 , display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-     
+    <View style={{ top:30, display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
       
     <View style={{marginHorizontal:4}}>
          <SelectBox

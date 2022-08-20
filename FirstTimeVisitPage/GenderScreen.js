@@ -2,15 +2,19 @@ import { StyleSheet, Text, View, Button, TextInput  } from 'react-native'
 import React from 'react'
 import GenderInput from '../components/GenderInput'
 
-const Gender = () => {
+const Gender = ({route, navigation}) => {
   return (
     <View style={styles.container}>
        <View style={styles.info}>
-         <Text style={{fontSize:25}}>What is your gender ?</Text>
+         <Text style={{display:"none"}}>{route.params.name}</Text>
+         <Text style={{fontSize:25 , textAlign:'center'}}>What is your gender ?</Text>
          <GenderInput />
+       
        </View>
        <View style={styles.NextButton}>
-          <Button title='Next' color={"red"} />
+          <Button title='Next' color={"#A60A3D"}  onPress={() =>
+        navigation.navigate('InterestScreen', { name: 'cancel' })
+      }/>
        </View>
     </View>
   )

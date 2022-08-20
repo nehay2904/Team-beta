@@ -1,21 +1,26 @@
 import { StyleSheet, Text, View, Button, TextInput  } from 'react-native'
 import React from 'react'
+import SexualPreferenceInput from '../components/SexualPreferenceInput'
 
-const Gender = () => {
+
+const SexualPreference = ({route, navigation}) => {
   return (
     <View style={styles.container}>
        <View style={styles.info}>
-         <Text style={{fontSize:25}}>What is your gender </Text>
-        
+       <Text style={{display:"none"}}>{route.params.name}</Text>
+         <Text style={{fontSize:25}}>What is your Sexual Preference ?</Text>
+         <SexualPreferenceInput />
        </View>
        <View style={styles.NextButton}>
-          <Button title='Next' color={"red"} />
+          <Button title='Next' color={"#A60A3D"} onPress={() =>
+        navigation.navigate('ImageUpload', { name: 'cancel' })
+      }/>
        </View>
     </View>
   )
 }
 
-export default Gender
+export default SexualPreference
 
 
 
