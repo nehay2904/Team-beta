@@ -10,29 +10,30 @@ import DatingType from '../FirstTimeVisitPage/DatingTypeScreen'
 
 const CombineCom = ({navigation, route}) => {
   return (
-    
-    
-      <View style={styles.container} >
+   
+     
+          
+          <View style={styles.container} >
         
         <Text style={{marginVertical:20, fontSize:25}}>Let Something About Yourself</Text>
         <Text style={{display:"none"}}>{route.params.name}</Text>
       <Name />
       
-      <Text style={{fontSize:20, marginTop:20}}>When is your Birthday</Text>
+      <Text style={{fontSize:20, marginTop:10}}>When is your Birthday</Text>
       <DateInput />
-    
-      <GenderInput />
       <Bio />
       <Profession />
+      <GenderInput />
+    
       
-       <View style={{alignItems:"flex-end", marginVertical:20}}>
+       <View style={{alignItems:"flex-end", marginTop:20 , marginBottom:100}}>
         <Button title='Next' color={"#990257"}  onPress={() =>
         navigation.navigate('DatingData', { name: 'cancel' })
       }/>
        </View>
       
     </View>
-     
+   
   
   
   )

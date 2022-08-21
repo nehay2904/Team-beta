@@ -22,7 +22,7 @@ export default Gender
 
 const styles = StyleSheet.create({
    container:{
-    top:80,
+    top:40,
     display:'flex',
     flexDirection:'column',
     height:"85%",

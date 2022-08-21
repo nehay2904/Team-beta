@@ -25,7 +25,7 @@ function GenderInput() {
   const [selectedTeam, setSelectedTeam] = useState({})
 
   return (
-    <View style={{marginTop:40}}>
+    <View style={{marginTop:10}}>
      
      <Text style={{fontSize:20, marginVertical:20}}>Gender</Text>
       <SelectBox

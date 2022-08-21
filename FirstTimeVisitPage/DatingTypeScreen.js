@@ -21,7 +21,7 @@ export default DatingType;
 
 const styles = StyleSheet.create({
    container:{
-  marginVertical:30
+  marginVertical:10
    
    },
    info:{

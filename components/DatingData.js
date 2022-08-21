@@ -13,7 +13,7 @@ import Insta from '../FirstTimeVisitPage/InstaScreen'
 const DatingData = ({navigation, route}) => {
   return (
     
-    <ScrollView>
+  
       
       <View style={styles.container} >
         
@@ -29,7 +29,7 @@ const DatingData = ({navigation, route}) => {
       
     </View>
      
-    </ScrollView>
+
   
   )
 }
