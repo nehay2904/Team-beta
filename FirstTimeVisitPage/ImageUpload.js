@@ -16,7 +16,7 @@ const ImageUpload = ({route, navigation}) => {
         </View>
        </View>
        <View style={styles.NextButton}>
-          <Button title='Next' color={"#A60A3D"} onPress={() =>
+          <Button title='Next' color={"#990257"} onPress={() =>
         navigation.navigate('NavComponent', { name: 'cancel' })
       }/>
        </View>

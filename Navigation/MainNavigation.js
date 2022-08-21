@@ -12,6 +12,8 @@ import DatingType from '../FirstTimeVisitPage/DatingTypeScreen';
 import SexualPreference from '../FirstTimeVisitPage/SexualPreferenceScreen';
 import NavComponent from '../components/NavComponent';
 import ImageUpload from '../FirstTimeVisitPage/ImageUpload';
+import CombineCom from '../components/CombineCom';
+import DatingData from '../components/DatingData';
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
@@ -26,54 +28,24 @@ const MainNavigation = () => {
           headerShown: false
         }} />
           <Stack.Screen 
-          name="Name" 
-          component={Name}
+          name="CombineCom" 
+          component={CombineCom}
+          options={{
+          headerShown: false
+        }} />
+        <Stack.Screen 
+          name="DatingData" 
+          component={DatingData}
           options={{
           headerShown: false
         }} />
          <Stack.Screen 
-          name="Bio" 
-          component={Bio}
-          options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="Profession" 
-          component={Profession}
-          options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="Birth" 
-          component={Birth}
-          options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="Gender" 
-          component={Gender}
-          options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
           name="InterestScreen" 
           component={InterestScreen}
           options={{
           headerShown: false
         }} />
           <Stack.Screen 
-          name="DatingType" 
-          component={DatingType}
-          options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="SexualPreference" 
-          component={SexualPreference}
-          options={{
-          headerShown: false
-        }} />
-         <Stack.Screen 
           name="ImageUpload" 
           component={ImageUpload}
           options={{
@@ -85,6 +57,7 @@ const MainNavigation = () => {
           options={{
           headerShown: false
         }} />
+       
          
           
       </Stack.Navigator>

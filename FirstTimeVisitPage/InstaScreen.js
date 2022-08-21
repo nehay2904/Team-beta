@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View, Button  } from 'react-native'
+import { StyleSheet, Text, View, Button, TextInput  } from 'react-native'
 import React from 'react'
 
-const Insta = ({navigation, route}) => {
+const Insta = ({route, navigation}) => {
   return (
-    <View  style={styles.container}>
-      <Text>Birth</Text>
-      <Text>{route.params.name}</Text>
-      <Button title='Next' onPress={() =>
-        navigation.navigate('ScreenTwo', { name: 'cancel' })
-      }/>
+    <View style={styles.container}>
+       
+       <View style={styles.info}>
+         <Text style={{fontSize:20 , marginTop:20}}>What Is Your Instagram-URL ?</Text>
+         <TextInput placeholder='Insta' style={styles.Input} />
+       </View>
+      
     </View>
   )
 }
@@ -17,11 +18,30 @@ export default Insta
 
 
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  container:{
+  //  top:80,
+  //  display:'flex',
+  //  flexDirection:'column',
+  //  height:"85%",
+  //  justifyContent:'space-between',
+  //  marginHorizontal:30
+  
   },
+  info:{
+   
+  },
+  NextButton:{
+   alignItems:'flex-end',
+  
+   
+  },
+  Input:{
+    borderColor:'gray',
+    borderWidth:2,
+    marginTop:7,
+    borderRadius:7,
+    padding:7
+  }
 });

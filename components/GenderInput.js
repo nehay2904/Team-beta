@@ -25,9 +25,9 @@ function GenderInput() {
   const [selectedTeam, setSelectedTeam] = useState({})
 
   return (
-    <View style={{ margin: 30 }}>
+    <View style={{marginTop:40}}>
      
-     
+     <Text style={{fontSize:20, marginVertical:20}}>Gender</Text>
       <SelectBox
         label="Select single"
         options={K_OPTIONS}

@@ -11,8 +11,8 @@ const InterestScreen= ({route, navigation}) => {
          <InterestInput />
        </View>
        <View style={styles.NextButton}>
-          <Button title='Next' color={"#A60A3D"}   onPress={() =>
-        navigation.navigate('DatingType', { name: 'cancel' })
+          <Button title='Next' color={"#990257"}   onPress={() =>
+        navigation.navigate('ImageUpload', { name: 'cancel' })
       }/>
        </View>
     </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
    flexDirection:'column',
    height:"85%",
    justifyContent:'space-between',
-   marginHorizontal:30,
+   marginHorizontal:10,
   
    
   },

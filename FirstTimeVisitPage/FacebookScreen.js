@@ -5,10 +5,8 @@ const Facebook = ({navigation, route}) => {
   return (
     <View  style={styles.container}>
       <Text>Facebook</Text>
-      <Text>{route.params.name}</Text>
-      <Button title='Next' onPress={() =>
-        navigation.navigate('ScreenTwo', { name: 'cancel' })
-      }/>
+      
+      
     </View>
   )
 }

@@ -25,7 +25,7 @@ function DatingTypeInput() {
   const [selectedTeam, setSelectedTeam] = useState({})
 
   return (
-    <View style={{ margin: 30 }}>
+    <View >
      
      
       <SelectBox
