@@ -14,9 +14,8 @@ const ProfileUpdateScreen = ({route}) => {
     <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
       <ScrollView>
       <Text>{route.params.name}</Text>
-        <View style={{ display:"flex", flexDirection:'row', justifyContent:'space-between' , marginHorizontal:50, marginVertical:30}}>
-          <TouchableOpacity><Text style={{ color: 'white'}}>Cancel</Text></TouchableOpacity>
-          <TouchableOpacity><Text style={{ color: 'white' }}>Edit</Text></TouchableOpacity>
+        <View style={{ display:"flex", flexDirection:'row', justifyContent:'flex-end' , marginHorizontal:50, marginVertical:30}}>
+          <TouchableOpacity><Text style={{ color: 'white', textAlign:'right' }}>Edit</Text></TouchableOpacity>
            </View>
         <View style={{ marginTop: 10 }}>
           <Image style={{ width: '82%', height: 250, marginHorizontal: 30, borderTopLeftRadius: 90, resizeMode:'contain' }} source={require('../Images/PicThree.jpg')} />

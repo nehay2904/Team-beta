@@ -10,8 +10,8 @@ function LandingScreen({navigation, route}) {
       <Image source={Logo}/>
       <Text style={styles.welcomeText}>Swipe</Text>
       <Text style={styles.SubText}>Find your perfect choice</Text>
-      <Button style={styles.button} title='Signup'  color="#87000B"  onPress={() =>
-        navigation.navigate('CombineCom', { name: 'cancel' })
+      <Button style={styles.button} title='Signup'  color="#87000B" onPress={() =>
+        navigation.navigate('LoginScreen', { name: 'cancel' })
       }></Button>
     </View> 
   );

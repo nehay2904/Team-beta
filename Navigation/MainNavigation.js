@@ -1,65 +1,55 @@
 import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Interest from '../Screens/Interest';
+import AddInfoPage from '../FirstTimeVisitPage/AddInfoPage';
+import BottomTab from '../components/BootomTab';
 import LandingScreen from '../Screens/LandingScreen';
-import Name from '../FirstTimeVisitPage/NameScreen';
-import Bio from '../FirstTimeVisitPage/BioScreen';
-import Profession from '../FirstTimeVisitPage/ProfessionScreen';
-import Birth from '../FirstTimeVisitPage/BirthdateScreen';
-import Gender from '../FirstTimeVisitPage/GenderScreen';
-import InterestScreen from '../FirstTimeVisitPage/InterestScreen';
-import DatingType from '../FirstTimeVisitPage/DatingTypeScreen';
-import SexualPreference from '../FirstTimeVisitPage/SexualPreferenceScreen';
-import NavComponent from '../components/NavComponent';
-import ImageUpload from '../FirstTimeVisitPage/ImageUpload';
-import CombineCom from '../components/CombineCom';
-import DatingData from '../components/DatingData';
+import ComNav from '../components/ComNav';
+import LocationAcess from './LocationAccess';
+import LoginScreen from '../Screens/LoginScreen';
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
   return (
 
       <Stack.Navigator>
-        
-        <Stack.Screen 
-          name="LandingScreen" 
+        <Stack.Screen
+          name="LandingScreen"
           component={LandingScreen}
           options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="CombineCom" 
-          component={CombineCom}
+            headerShown: false,
+            
+          }}
+        />
+         <Stack.Screen
+          name="LoginScreen "
+          component={LoginScreen }
           options={{
-          headerShown: false
-        }} />
+            headerShown: false,
+            
+          }}
+        />
         <Stack.Screen 
-          name="DatingData" 
-          component={DatingData}
-          options={{
+        name="LocationAcess" 
+        component={LocationAcess}
+         options={{
           headerShown: false
         }} />
-         <Stack.Screen 
-          name="InterestScreen" 
-          component={InterestScreen}
+         <Stack.Screen
+          name="Interest"
+          component={Interest}
           options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="ImageUpload" 
-          component={ImageUpload}
+            headerShown: false
+          }}
+        />
+         <Stack.Screen
+          name="ComNav"
+          component={ComNav}
           options={{
-          headerShown: false
-        }} />
-          <Stack.Screen 
-          name="NavComponent" 
-          component={NavComponent}
-          options={{
-          headerShown: false
-        }} />
-       
-         
-          
+            headerShown: false
+          }}
+        />
       </Stack.Navigator>
   
   );

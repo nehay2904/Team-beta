@@ -1,26 +1,30 @@
 
-import MainNavigation from './Navigation/MainNavigation';
+
 import { NavigationContainer } from '@react-navigation/native';
-import Gender from './FirstTimeVisitPage/GenderScreen';
-import CombineCom from './components/CombineCom';
 import { ScrollView } from 'react-native';
-import DatingData from './components/DatingData';
+import BottomTab from './components/BootomTab';
+import AddInfoPage from './FirstTimeVisitPage/AddInfoPage';
+import Loginpage from './Loginpage';
+import LocationAcess from './Navigation/LocationAccess';
+import MainNavigation from './Navigation/MainNavigation';
+import Stack from './Screens/Demo';
+import Interest from './Screens/Interest';
+import LandingScreen from './Screens/LandingScreen';
+import LocationScreen from './Screens/LocationScreen';
 
 export default function App() {
   
   return(
-   
-    <NavigationContainer>
-      <MainNavigation />
-    </NavigationContainer>
-    // <Gender />
-    
-        //  <CombineCom />
-  
-    // <DatingData />
- 
-    
-    
+    // <AddInfoPage />  
+    // <LandingScreen />
+    // <Interest />
+    // <NavigationContainer>
+    //   <MainNavigation />
+    // </NavigationContainer>
+    // <LocationScreen />
+    // <Stack />
+    // <LocationAcess />
+    <Loginpage />
   );
   
 }

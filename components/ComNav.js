@@ -2,17 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import BottomTab from './BootomTab'
 
-const NavComponent = ({navigation, route}) => {
+const ComNav = ({ route}) => {
   return (
-   <>
-   
-      <Text style={{display:"none"}} >{route.params.name}</Text>
+    <>
+       <Text style={{display:'none'}}>{route.params.name}</Text>
        <BottomTab />
-   </>
-   
+    </>
   )
 }
 
-export default NavComponent
+export default ComNav
 
 const styles = StyleSheet.create({})

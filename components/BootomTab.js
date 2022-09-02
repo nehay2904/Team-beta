@@ -17,53 +17,55 @@ const Tab = createMaterialBottomTabNavigator();
 
 const BottomTab = ({navigation, route}) => {
     return (
-      
-        <Tab.Navigator initialRouteName='Profie'  barStyle={{ backgroundColor: '#0F0F0F', height: 70, paddingTop: 10}} shifting={true} screenOptions={{ style: { position: 'absolute',backgroundColor: 'black', height: 90,} }}>
+   
+          
+          <Tab.Navigator initialRouteName='Profie'  barStyle={{ backgroundColor: '#0F0F0F', height: 70, paddingTop: 10}} shifting={true} screenOptions={{ style: { position: 'absolute',backgroundColor: 'black', height: 90,} }}>
 
-            <Tab.Screen name="My Profile" component={MyStack} options={{ 
+<Tab.Screen name="My Profile" component={MyStack} options={{ 
+    
+    tabBarIcon: (tabInfo) => {
+        return (
+            <Ionicons
+                name="md-person-outline"
+                size={24}
                 
-                tabBarIcon: (tabInfo) => {
-                    return (
-                        <Ionicons
-                            name="md-person-outline"
-                            size={24}
-                            
-                            color={tabInfo.focused ? "#E94D4D" : "grey"}
-                             />)
-                }
-            }
-            } />
-            <Tab.Screen name="Find" component={FindScreen} options={{
-                tabBarIcon: (tabInfo) => {
-                    return (
-                        <Ionicons
-                            name="md-compass"
-                            size={25}
-                            color={tabInfo.focused ? "#E94D4D" : "grey"} />)
-                }
-            }}
-            />
-            <Tab.Screen name="Swipe" component={Main} options={{
-                tabBarIcon: (tabInfo) => {
-                    return (
-                        <Ionicons
-                            name="md-home"
-                            size={24}
-                            color={tabInfo.focused ? "#E94D4D" : "grey"} />)
-                }
-            }
-            } />
-            <Tab.Screen name="Chat" component={ChatScreen} options={{
-                tabBarIcon: (tabInfo) => {
-                    return (
-                        <Ionicons
-                            name="md-chatbubbles-outline"
-                            size={24}
-                            color={tabInfo.focused ? "#E94D4D" : "grey"} />)
-                }
-            }
-            } />
-        </Tab.Navigator>
+                color={tabInfo.focused ? "#E94D4D" : "grey"}
+                 />)
+    }
+}
+} />
+<Tab.Screen name="Find" component={FindScreen} options={{
+    tabBarIcon: (tabInfo) => {
+        return (
+            <Ionicons
+                name="md-compass"
+                size={25}
+                color={tabInfo.focused ? "#E94D4D" : "grey"} />)
+    }
+}}
+/>
+<Tab.Screen name="Swipe" component={Main} options={{
+    tabBarIcon: (tabInfo) => {
+        return (
+            <Ionicons
+                name="md-home"
+                size={24}
+                color={tabInfo.focused ? "#E94D4D" : "grey"} />)
+    }
+}
+} />
+<Tab.Screen name="Chat" component={ChatScreen} options={{
+    tabBarIcon: (tabInfo) => {
+        return (
+            <Ionicons
+                name="md-chatbubbles-outline"
+                size={24}
+                color={tabInfo.focused ? "#E94D4D" : "grey"} />)
+    }
+}
+} />
+</Tab.Navigator>
+  
     )
 }
 
