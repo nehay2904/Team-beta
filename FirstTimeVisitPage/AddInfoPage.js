@@ -43,7 +43,7 @@ const AddInfoPage = ({ navigation, route }) => {
   
   }
   return (
-   <ScrollView>
+   <ScrollView>     
      <View style={styles.container}>
       <View style={styles.subcontainer}>
         {/* <Text style={{ display: 'none' }}>{route.params.name}</Text> */}

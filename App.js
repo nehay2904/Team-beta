@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ScrollView } from 'react-native';
 import BottomTab from './components/BootomTab';
 import AddInfoPage from './FirstTimeVisitPage/AddInfoPage';
-import Loginpage from './Loginpage';
 import LocationAcess from './Navigation/LocationAccess';
 import MainNavigation from './Navigation/MainNavigation';
 import Stack from './Screens/Demo';
@@ -18,13 +17,13 @@ export default function App() {
     // <AddInfoPage />  
     // <LandingScreen />
     // <Interest />
-    // <NavigationContainer>
-    //   <MainNavigation />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <MainNavigation />
+    </NavigationContainer>
     // <LocationScreen />
     // <Stack />
     // <LocationAcess />
-    <Loginpage />
+  
   );
   
 }
