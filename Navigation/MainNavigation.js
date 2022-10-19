@@ -7,6 +7,7 @@ import BottomTab from '../components/BootomTab';
 import LandingScreen from '../Screens/LandingScreen';
 import ComNav from '../components/ComNav';
 import LocationAcess from './LocationAccess';
+import LoginScreen from '../Screens/LoginScreen';
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
@@ -21,6 +22,7 @@ const MainNavigation = () => {
             
           }}
         />
+      
       
         <Stack.Screen 
         name="LocationAcess" 
