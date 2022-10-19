@@ -11,7 +11,7 @@ function LandingScreen({navigation, route}) {
       <Text style={styles.welcomeText}>Swipe</Text>
       <Text style={styles.SubText}>Find your perfect choice</Text>
       <Button style={styles.button} title='Signup'  color="#87000B" onPress={() =>
-        navigation.navigate('LocationAcess', { name: 'cancel' })
+        navigation.navigate('addinfo', { name: 'cancel' })
       }></Button>
     </View> 
   );

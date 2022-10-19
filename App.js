@@ -12,7 +12,7 @@ import Interest from './Screens/Interest';
 import LandingScreen from './Screens/LandingScreen';
 import LocationScreen from './Screens/LocationScreen';
 import LocationAccessPage from './FirstTimeVisitPage/LocationAccessPage';
-import LocationPage from './FirstTimeVisitPage/LocationPage'
+import LocationPage from './FirstTimeVisitPage/LoginPage';
 export default function App() {
   
   return(
@@ -21,16 +21,16 @@ export default function App() {
     // </ScrollView>
     // <LandingScreen />
     // <Interest />
-    // <NavigationContainer>
-    //   <MainNavigation />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <MainNavigation />
+    </NavigationContainer>
     // <LocationScreen />
     // <Stack />
     // <LocationAcess />
     // <DropDown />
     // <LocationAccessPage />
-    <LocationPage />
-  
+    // <LocationPage /
+   
   );
   
 }

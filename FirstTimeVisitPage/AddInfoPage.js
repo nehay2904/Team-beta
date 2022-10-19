@@ -51,7 +51,7 @@ const D_OPTIONS = [
 
 
 
-const AddInfoPage = () => {
+const AddInfoPage = ({navigation, route}) => {
 
   const [bio, setBio] = useState('')
   const [profession, setProfession] = useState('')
@@ -60,7 +60,7 @@ const AddInfoPage = () => {
   const [sexualPreference, setSexualPreference] = useState('')
 
 
-  const [userdata, setuserdata] = useState(second)
+  const [userdata, setuserdata] = useState("")
   const onChangeG = () => {
     return (val) => setGender(val)
   }
@@ -74,6 +74,8 @@ const AddInfoPage = () => {
 
   const createUser = (event) => {
 
+
+    navigation.navigate('Interest', { name: 'cancel' })
     event.preventDefault()
 
     axios.post('https://dwibe-backend-dev.herokuapp.com/profile', {
@@ -96,8 +98,10 @@ const AddInfoPage = () => {
 
   return (
 
-    <View style={styles.container}>
+   <ScrollView>
+     <View style={styles.container}>
       <View style={styles.subcontainer}>
+          <Text>{route.params.name}</Text>
         <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: 60, marginBottom: 30 }} >
           <Image style={{ width: 45, height: 30, marginTop: 5, marginRight: 7 }} source={ProfileLogo} />
           <Text style={{ color: 'white', fontSize: 25, marginRight: 20 }} >Swipe</Text>
@@ -180,6 +184,7 @@ const AddInfoPage = () => {
       </View>
       
     </View>
+   </ScrollView>
 
 
 

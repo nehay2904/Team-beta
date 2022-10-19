@@ -1,6 +1,5 @@
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, {useState} from 'react'
-import ProfileLogo from '../Images/LogoTwo.png';
 import Ionicons from '@expo/vector-icons/AntDesign'
 import axios from 'axios';
 
@@ -23,21 +22,26 @@ const Interest= ({navigation, route}) => {
   
   }
 
-
   return (
     <View style={styles.container}>
       <View style={styles.subcontainer}>
-      <Text style={{display:'none'}}>{route.params.name}</Text>
+      
          <Text style={styles.Title} >Pick Your Interest </Text>
          <Text style={styles.Subtitle}>* You can choose only 6</Text>
-         <View style={{width:"100%", height:200,  borderRadius:15}} value={interest} onChange={(e) => { setInterest(e.target.value) }} >
+         <View style={styles.InterestInput} value={interest} onChange={(e) => { setInterest(e.target.value) }} >
+         <View style={styles.selectedoptions}>
+             <Text >Cooking</Text>
+             <TouchableOpacity >
+             <Ionicons name="closecircle" size={20} color="black" style={{marginLeft:5}} />
+             </TouchableOpacity>
+          </View>
          </View>
          <View  >
            <View style={{display:'flex' , flexDirection:'row' , justifyContent:'space-between', marginVertical:10, marginHorizontal:20}}>
-           
+          
            <View style={styles.optionsDown}>
              <Text >Sports</Text>
-             <TouchableOpacity>
+             <TouchableOpacity style={styles.hidden} >
              <Ionicons name='pluscircle' size={20} color="black" style={{marginLeft:5}} />
              </TouchableOpacity>
              </View>
@@ -178,5 +182,29 @@ const styles = StyleSheet.create({
         borderColor:'#4D4D4D',
         borderRadius:8.4902
 
-    }
+    },
+    InterestInput:{
+       width:"100%",
+       height:170,
+       borderWidth:3,
+       borderColor:"#999997",
+       marginTop:10,
+       marginBottom:40,
+       borderRadius:20
+    },
+    selectedoptions:{
+      color:'#660000',
+      backgroundColor:'white',
+      paddingVertical:8,
+      paddingHorizontal:15,
+      borderRadius:50,
+      marginHorizontal:5,
+      display:'flex',
+      flexDirection:"row",
+      marginVertical:0,
+      marginTop:8,
+      width:100
+    },
+   
+
 })

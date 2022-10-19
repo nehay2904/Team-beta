@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ProfilePage from './ProfilePage';
 import ProfilePic from '../Images/PicFour.jpg'
-const ProfileUpdateScreen = ({route}) => {
+const ProfileUpdateScreen = ({route, navigation}) => {
 
 
 
@@ -15,7 +15,9 @@ const ProfileUpdateScreen = ({route}) => {
       <ScrollView>
       <Text>{route.params.name}</Text>
         <View style={{ display:"flex", flexDirection:'row', justifyContent:'flex-end' , marginHorizontal:50, marginVertical:30}}>
-          <TouchableOpacity><Text style={{ color: 'white', textAlign:'right' }}>Edit</Text></TouchableOpacity>
+          <TouchableOpacity  onPress={() =>
+        navigation.navigate('ProfilePage', { name: 'cancel' })
+      }><Text style={{ color: 'white', textAlign:'right' }}>Edit</Text></TouchableOpacity>
            </View>
         <View style={{ marginTop: 10 }}>
           <Image style={{ width: '82%', height: 250, marginHorizontal: 30, borderTopLeftRadius: 90, resizeMode:'contain' }} source={require('../Images/PicThree.jpg')} />
@@ -50,7 +52,7 @@ const ProfileUpdateScreen = ({route}) => {
           />
         </View>
         <Text style={{ color: '#8f8c89', marginLeft: 40, marginTop: 20, fontSize: 18 }}>Add Bio </Text>
-        <TextInput style={{ backgroundColor: '#4d4c4b', color: 'white', marginHorizontal: 30, borderRadius: 20, height: 100,paddingTop:15, marginTop: 8, paddingHorizontal: 10, textAlignVertical: 'top' }} />
+        <TextInput style={{ backgroundColor: '#4d4c4b', color: 'white', marginHorizontal: 30, borderRadius: 20, height: 100,paddingTop:15, marginTop: 8, paddingHorizontal: 10, textAlignVertical: 'top', marginBottom:20 }} />
       </ScrollView>
     </SafeAreaView>
   )

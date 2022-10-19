@@ -15,7 +15,7 @@ export default function LocationPage() {
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId: "739241521842-8fv9cdlq5n6h9tnjmo55titbnmami8t8.apps.googleusercontent.com",
     iosClientId: "694235095257-qnub27n3o6s0e3lo1sneio03o6ka5k9m.apps.googleusercontent.com",
-    expoClientId:"dwipe-362314.apps.googleusercontent.com"
+    expoClientId:""
 
   });
 
