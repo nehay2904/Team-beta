@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Interest from '../Screens/Interest';
+import Interest from '../FirstTimeVisitPage/Interest';
 import AddInfoPage from '../FirstTimeVisitPage/AddInfoPage';
 import BottomTab from '../components/BootomTab';
 import LandingScreen from '../Screens/LandingScreen';
-import ComNav from '../components/ComNav';
+import ComNav from './ComNav';
 import LocationAcess from './LocationAccess';
 const Stack = createNativeStackNavigator();
 

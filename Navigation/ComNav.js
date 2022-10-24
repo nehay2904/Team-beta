@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import BottomTab from './BootomTab'
+import BottomTab from '../components/BootomTab'
 
 const ComNav = ({ route}) => {
   return (

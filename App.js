@@ -7,12 +7,12 @@ import AddInfoPage from './FirstTimeVisitPage/AddInfoPage';
 import DropDown from './FirstTimeVisitPage/Dropdown';;
 import LocationAcess from './Navigation/LocationAccess';
 import MainNavigation from './Navigation/MainNavigation';
-import Stack from './Screens/Demo';
-import Interest from './Screens/Interest';
+import Stack from './components/InputComponent';
+import Interest from './FirstTimeVisitPage/Interest';
 import LandingScreen from './Screens/LandingScreen';
 import LocationScreen from './Screens/LocationScreen';
 import LocationAccessPage from './FirstTimeVisitPage/LocationAccessPage';
-import LocationPage from './FirstTimeVisitPage/LoginPage';
+import LocationPage from './Screens/LoginPage';
 export default function App() {
   
   return(
