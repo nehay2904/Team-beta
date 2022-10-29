@@ -1,10 +1,8 @@
-import { View, Text, TextInput, Image, ScrollView, TouchableOpacity, Button } from 'react-native'
+import { View, Text, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import SwitchSelector from "react-native-switch-selector";
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import ProfilePage from './ProfilePage';
-import ProfilePic from '../Images/PicFour.jpg'
 const ProfileUpdateScreen = ({route, navigation}) => {
 
 
@@ -13,7 +11,7 @@ const ProfileUpdateScreen = ({route, navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
       <ScrollView>
-      <Text>{route.params.name}</Text>
+      <Text style={{display:"none"}}>{route.params.name}</Text>
         <View style={{ display:"flex", flexDirection:'row', justifyContent:'flex-end' , marginHorizontal:50, marginVertical:30}}>
           <TouchableOpacity  onPress={() =>
         navigation.navigate('ProfilePage', { name: 'cancel' })

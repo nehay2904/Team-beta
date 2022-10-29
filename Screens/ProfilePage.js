@@ -5,7 +5,7 @@ import PostPictureOne from '../Images/ProfilePic.jpg'
 import PostPictureTwo from '../Images/PicFive.jpg'
 import PostPictureThree from '../Images/PicThree.jpg'
 import Ionicons from '@expo/vector-icons/FontAwesome'
-
+import { AntDesign } from '@expo/vector-icons';
 
 
 const ProfilePage = ({navigation}) => {
@@ -19,9 +19,15 @@ const ProfilePage = ({navigation}) => {
           <View style={styles.header}>
 
             <Text style={styles.heading}>My Profile</Text>
-            <Ionicons name='pencil' color={"white"} style={{ marginBottom: 20 }} size={35}  onPress={() =>
-        navigation.navigate('ProfileUpdateScreen', { name: 'cancel' })
-      }/>
+            <View style={{display:"flex", flexDirection:"row"}}>
+              <Ionicons name='pencil' color={"white"} style={{ marginBottom: 20, marginRight:15 }} size={30} onPress={() =>
+                navigation.navigate('ProfileUpdateScreen', { name: 'cancel' })
+              } />
+              <AntDesign name="setting" size={30} color="white" onPress={() =>
+                navigation.navigate('SettingPage', { name: 'NEHA' })
+              } />
+
+            </View>
           </View>
           <Image source={ProfilePicture} style={styles.ProfilePicture} />
           <Text style={styles.profilename}>Neha Yednurwar</Text>
@@ -33,6 +39,7 @@ const ProfilePage = ({navigation}) => {
             <Image style={styles.PicPost} source={PostPictureThree} />
           </View>
         </View>
+      
       </View>
     </ScrollView>
 

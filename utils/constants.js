@@ -4,7 +4,7 @@ export const { width, height } = Dimensions.get('screen');
 
 export const CARD = {
   CARD_WIDTH: width * 0.96,
-  CARD_HEIGHT: height * 0.72,
+  CARD_HEIGHT: height * 0.68,
   CARD_OUT_WIDTH: width + width * 0.9,
   CARD_BORDER_RADIUS: 20,
 };

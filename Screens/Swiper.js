@@ -4,7 +4,7 @@ import Main from '../src/Main'
 
 const Swiper = () => {
   return (
-    <View>
+    <View >
       <Main />
     </View>
   )

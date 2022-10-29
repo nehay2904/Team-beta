@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProfilePage from '../Screens/ProfilePage';
 import ProfileUpdateScreen from '../Screens/ProfileUpdateScreen';
 import { Header } from 'react-navigation-stack';
-
+import SettingPage from '../Screens/SettingPage';
 const Stack = createNativeStackNavigator();
 
 const MyStack = () => {
@@ -22,6 +22,11 @@ const MyStack = () => {
          options={{
           headerShown: false
         }} />
+         <Stack.Screen name="SettingPage"  component={SettingPage}
+          options={{
+            headerShown: false
+          }} 
+         />
       </Stack.Navigator>
   
   );
