@@ -9,11 +9,11 @@ const SettingPage = ({navigation}) => {
         <View style={styles.container}>
             <View style={styles.subcontainer}>
                 <View  style={{display:"flex",  flexDirection:"row", justifyContent:'space-between', marginBottom:50, marginTop:20}}>
-                    <SimpleLineIcons name='arrow-left' style={{marginTop:9}} color={"white"} size={22} onPress={() =>
+                    <SimpleLineIcons name='arrow-left' style={{marginTop:9}} color={"white"} size={20} onPress={() =>
                 navigation.navigate('ProfilePage', { name: 'cancel' })
               } />
                     <Text style={{color:"white", fontSize:30}} >Settings</Text>
-                    <AntDesign style={{marginTop:5}} name="setting" size={30} color="white" />
+                    <AntDesign style={{marginTop:5}} name="setting" size={28} color="white" />
                 </View>
                 <TouchableOpacity>
                     <View style={styles.sectionContainer}>
