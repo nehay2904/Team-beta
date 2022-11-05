@@ -3,13 +3,14 @@ import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const AddPhotosScreen = () => {
+const AddPhotosScreen = ({navigation, route}) => {
     return (
         <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }} >
             <ScrollView>
                 <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 20, marginTop: 10 }}>
                     <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40 }}>
                         <Ionicons name='camera' size={26} color='white' style={{ padding: 5 }} />
+                        <Text style={{display:"none"}}>{route.params.name}</Text>
                     </View>
                     <Text style={{ color: 'white', margin: 8 }}>------></Text>
                     <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40 }}>
@@ -56,6 +57,13 @@ const AddPhotosScreen = () => {
                         </TouchableOpacity>
                     </View>
                 </View>
+                <TouchableOpacity activeOpacity={0.5} onPress={()=>{
+                     navigation.navigate('Interest', { name: 'cancel' })
+                }} >
+                  <View style={{marginTop:10}} >
+                    <Text style={{backgroundColor:'#660000',color:"#FFFFFF", fontSize:20, textAlign:'center', marginTop:50, paddingHorizontal:20, paddingVertical:12 , borderRadius:20}}>Next</Text>
+                 </View>
+                </TouchableOpacity>
             </ScrollView>
         </SafeAreaView>
     )

@@ -75,7 +75,7 @@ const AddInfoPage = ({navigation, route}) => {
   const createUser = (event) => {
 
 
-    navigation.navigate('Interest', { name: 'cancel' })
+    navigation.navigate('AddPhotosScreen', { name: 'cancel' })
     event.preventDefault()
 
     axios.post('https://dwibe-backend-dev.herokuapp.com/profile', {

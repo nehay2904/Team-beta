@@ -1,9 +1,7 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProfilePage from '../Screens/ProfilePage';
-import ProfileUpdateScreen from '../Screens/ProfileUpdateScreen';
-import { Header } from 'react-navigation-stack';
+import ProfileUpdateScreen from '../Screens/ProfileUpdate';
 import SettingPage from '../Screens/SettingPage';
 const Stack = createNativeStackNavigator();
 

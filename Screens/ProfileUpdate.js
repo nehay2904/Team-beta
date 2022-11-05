@@ -3,7 +3,7 @@ import React from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { MaterialIcons } from '@expo/vector-icons';
 
-const ProfileScreen = () => {
+const ProfileUpdateScreen = () => {
   return (
     <SafeAreaProvider>
 
@@ -34,7 +34,7 @@ const ProfileScreen = () => {
   )
 }
 
-export default ProfileScreen
+export default ProfileUpdateScreen
 
 const styles = StyleSheet.create({
   header:{
