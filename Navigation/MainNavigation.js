@@ -28,7 +28,7 @@ const MainNavigation = () => {
           headerShown: false
         }} />
            <Stack.Screen 
-        name="AddPhtotsScreen" 
+        name="AddPhotosScreen" 
         component={AddPhotosScreen}
          options={{
           headerShown: false

@@ -9,6 +9,7 @@ const AddPhotosScreen = ({navigation, route}) => {
             <ScrollView>
                 <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 20, marginTop: 10 }}>
                     <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40 }}>
+                         <Text>{route.params.name}</Text>
                         <Ionicons name='camera' size={26} color='white' style={{ padding: 5 }} />
                         <Text style={{display:"none"}}>{route.params.name}</Text>
                     </View>
