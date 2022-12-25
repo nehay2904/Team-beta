@@ -29,7 +29,7 @@ const DATA = [
 
 
 
-const ChatScreen = () => {
+const ChatScreen = ({navigation, route}) => {
 
 
 
@@ -55,7 +55,9 @@ const ChatScreen = () => {
 
         <FlatList data={DATA} renderItem={(element) => {
           return (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() =>
+              navigation.navigate('ChatFeedDemo', { name: 'cancel' })
+            }>
               <View style={{ backgroundColor: 'grey', marginTop: 20, height: 60, marginHorizontal: 20, borderRadius: 15, flexDirection: 'row' }}>
                 <Image style={{ width: 50, height: 50, borderRadius: 40, marginTop: 4, marginLeft: 10 }} source={{ uri: element.item.imgurl }} />
                 <View>

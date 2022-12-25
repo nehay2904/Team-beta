@@ -10,7 +10,7 @@ import Main from '../src/Main';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import ProfilePage from '../Screens/ProfilePage';
 import MyStack from '../Navigation/ProfileNavigation';
-
+import ChatNav from '../Navigation/ChatNav';
 const Tab = createMaterialBottomTabNavigator();
 
 
@@ -54,7 +54,7 @@ const BottomTab = ({navigation, route}) => {
     }
 }
 } />
-<Tab.Screen name="Chat" component={ChatScreen} options={{
+<Tab.Screen name="Chat" component={ChatNav} options={{
     tabBarIcon: (tabInfo) => {
         return (
             <Ionicons
