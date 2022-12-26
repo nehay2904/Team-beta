@@ -8,9 +8,9 @@ const AddPhotosScreen = ({navigation, route}) => {
         <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }} >
             <ScrollView>
                 <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 20, marginTop: 10 }}>
-                    <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40 }}>
-                         <Text>{route.params.name}</Text>
-                        <Ionicons name='camera' size={26} color='white' style={{ padding: 5 }} />
+                    <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40,  paddingBottom:10 }}>
+                         {/* <Text style={{display:"none"}}>{route.params.name}</Text> */}
+                        <Ionicons name='camera' size={28} color='white' style={{marginTop:5, marginLeft:5 }} />
                         <Text style={{display:"none"}}>{route.params.name}</Text>
                     </View>
                     <Text style={{ color: 'white', margin: 8 }}>------></Text>

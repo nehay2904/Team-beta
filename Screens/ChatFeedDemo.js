@@ -51,7 +51,7 @@ const FindScreen = () => {
               <Text style={{ color: 'white' }}>heyyyaaaaaaaaaaaaaaaaaaaaaa how are you doin?</Text>
             </View>
           </View>
-          <View style={styles.chatBodySend}>
+          {/* <View style={styles.chatBodySend}>
             <View style={styles.chatSender}>
               <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
             </View>
@@ -110,13 +110,13 @@ const FindScreen = () => {
             <View style={styles.chatSender}>
               <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
             </View>
-          </View>
+          </View> */}
 
         </View>
         
        </ScrollView>
-      <View style={{display:'flex', flexDirection:"row" ,justifyContent:'space-between', paddingHorizontal:15, paddingVertical:10,  borderColor:"gray", borderWidth:1, paddingTop:10, borderRadius:50, marginBottom:40}}>
-          <TextInput placeholder='Message' placeholderTextColor="gray"  style={{fontSize:20, paddingHorizontal:20, paddingBottom:5,}}         />
+      <View style={{display:'flex', flexDirection:"row" ,justifyContent:'space-between', paddingHorizontal:15, paddingVertical:10,  borderColor:"gray", borderWidth:1, paddingTop:10, borderRadius:50, marginBottom:40, marginHorizontal:15}}>
+          <TextInput placeholder='Message' placeholderTextColor="gray"  style={{fontSize:20, paddingHorizontal:20, color:'white'}}         />
           <MaterialCommunityIcons name="send-outline"  size={27} color="white" />
       </View>
       </View>
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
 
   },
   external: {
-    maxHeight:"90%",
+    height:"87%",
     backgroundColor: 'black',
   
 
@@ -150,9 +150,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'linear-gradient(360deg, #333333 0%, rgba(51, 51, 51, 0.3) 100%)',
     margin: 15,
     borderRadius: 20,
-    marginBottom:130,
     paddingBottom:40,
-    height:"100%"
+    height:"80%"
 
   },
   chatBody: {
