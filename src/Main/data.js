@@ -8,15 +8,15 @@ export const pets = [
     source: require('../../assets/pet2.jpg'),
   },
   {
-    name: 'Nerd Dog',
+    name: 'Nerd ',
     source: require('../../assets/pet3.jpg'),
   },
   {
-    name: 'Smiley Husky',
+    name: 'Smiley',
     source: require('../../assets/pet4.jpg'),
   },
   {
-    name: 'Serious Dog',
+    name: 'Serious',
     source: require('../../assets/pet5.jpg'),
   },
 ];

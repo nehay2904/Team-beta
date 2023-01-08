@@ -58,7 +58,7 @@ const ProfileUpdateScreen = ({route}) => {
           <TouchableOpacity><Text style={{ color: 'white' }}>Edit</Text></TouchableOpacity>
            </View>
         <View style={{ marginTop: 10 }}>
-          <Image style={{ width: '82%', height: 250, marginHorizontal: 30, borderTopLeftRadius: 90, resizeMode:'contain' }} source={require('../Images/PicThree.jpg')} />
+          <Image style={{ width: '82%', height: 250, marginHorizontal: 30, borderTopLeftRadius: 90, resizeMode:'contain' }} source={'https://images.unsplash.com/photo-1515041219749-89347f83291a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60'} />
           <TouchableOpacity style={{ position: 'absolute' }} >
             <Ionicons name='camera' size={40} color='#4d4c4b' style={{ position: 'absolute', left: 275, top: 200 }} />
           </TouchableOpacity>

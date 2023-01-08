@@ -1,12 +1,37 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, TextInput } from 'react-native'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-
+import axios from 'axios';
 
 const FindScreen = () => {
+  
+
+  const [senderMessage, setSenderMessage] = useState("")
+const [userdata, setUserdata] = useState("")
+
+useEffect(() => {
+  axios.get('https://dwibe-backend-dev.herokuapp.com/foo').then((response) => {
+      setUserdata(response.data)
+  })
+
+}, [])
+  
+  const createUser = (event) => {
+
+    event.preventDefault()
+
+    axios.post('https://dwibe-backend-dev.herokuapp.com/coo', {
+       senderMessage
+    }).then((response) => {
+
+        setUserdata([...userdata, {
+           senderMessage
+        }])
+    })
+}
   return (
   <>
     <View style={{ display: 'flex', flexDirection: 'column' }}>
@@ -48,76 +73,16 @@ const FindScreen = () => {
           </View>
           <View style={styles.chatBodySend}>
             <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaaaaaaaaaaaaaaaaaaaaa how are you doin?</Text>
+              <Text style={{ color: 'white' }}>{userdata.senderMessage}</Text>
             </View>
           </View>
-          {/* <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View> 
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View>
-          <View style={styles.chatBodySend}>
-            <View style={styles.chatSender}>
-              <Text style={{ color: 'white' }}>heyyyaaa how are you doin?</Text>
-            </View>
-          </View> */}
 
         </View>
         
        </ScrollView>
       <View style={{display:'flex', flexDirection:"row" ,justifyContent:'space-between', paddingHorizontal:15, paddingVertical:10,  borderColor:"gray", borderWidth:1, paddingTop:10, borderRadius:50, marginBottom:40, marginHorizontal:15}}>
-          <TextInput placeholder='Message' placeholderTextColor="gray"  style={{fontSize:20, paddingHorizontal:20, color:'white'}}         />
-          <MaterialCommunityIcons name="send-outline"  size={27} color="white" />
+          <TextInput placeholder='Message' placeholderTextColor="gray"  style={{fontSize:20, paddingHorizontal:20, color:'white'}}  value={senderMessage} onChange={(e) => { setSenderMessage(e.target.value) }}        />
+          <MaterialCommunityIcons name="send-outline"  size={27} color="white"  onClick={createUser} />
       </View>
       </View>
     
