@@ -5,11 +5,11 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 const AddPhotosScreen = ({navigation, route}) => {
     return (
-        <SafeAreaView style={{ backgroundColor: 'black', flex: 1 }} >
+        <SafeAreaView style={{ backgroundColor: 'black', flex: 1, justifyContent:"center" }} >
             <ScrollView>
-                <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 20, marginTop: 10 }}>
-                    <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, height: 40,  paddingBottom:10 }}>
-                         {/* <Text style={{display:"none"}}>{route.params.name}</Text> */}
+                <View style={{ display: 'flex', flexDirection: 'row', marginLeft: 20, marginTop: 10 , justifyContent:"center"}}>
+                    <View style={{ borderColor: 'red', borderWidth: 1, borderRadius: 20, width: 40, justifyContent:"center", height: 40,  paddingBottom:10 }}>
+                       
                         <Ionicons name='camera' size={28} color='white' style={{marginTop:5, marginLeft:5 }} />
                         <Text style={{display:"none"}}>{route.params.name}</Text>
                     </View>
@@ -20,7 +20,7 @@ const AddPhotosScreen = ({navigation, route}) => {
                 </View>
 
                 <Text style={{ color: 'white', marginLeft: 20, marginBottom: 30, marginTop: 10, fontSize: 38 }}>Add Pictures</Text>
-                <View style={{ marginHorizontal: 20 }}>
+                <View style={{ marginHorizontal: 20 , justifyContent:"center", alignItems:"center" }}>
                     <TouchableOpacity>
 
                         <View style={{ borderColor: 'white', borderStyle: 'dashed', width: 320, height: 150, borderRadius: 1, borderWidth: 2 }}>
@@ -61,8 +61,8 @@ const AddPhotosScreen = ({navigation, route}) => {
                 <TouchableOpacity activeOpacity={0.5} onPress={()=>{
                      navigation.navigate('Interest', { name: 'cancel' })
                 }} >
-                  <View style={{marginTop:10}} >
-                    <Text style={{backgroundColor:'#660000',color:"#FFFFFF", fontSize:20, textAlign:'center', marginTop:50, paddingHorizontal:20, paddingVertical:12 , borderRadius:20}}>Next</Text>
+                  <View style={{ justifyContent:'center', alignItems:"flex-end", marginRight:15, marginBottom:15}} >
+                    <Text style={{backgroundColor:'#660000',color:"#FFFFFF", fontSize:20, textAlign:'center', marginTop:50, paddingHorizontal:20, paddingVertical:12 , borderRadius:20}}>Next </Text>
                  </View>
                 </TouchableOpacity>
             </ScrollView>

@@ -5,6 +5,8 @@ import AddInfoPage from '../FirstTimeVisitPage/AddInfoPage';
 import LandingScreen from '../Screens/LandingScreen';
 import ComNav from './ComNav';
 import AddPhotosScreen from '../FirstTimeVisitPage/AddPhotosScreen';
+import { LogBox } from 'react-native';
+import LoginPage from '../Screens/LoginPage';
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
@@ -14,6 +16,14 @@ const MainNavigation = () => {
         <Stack.Screen
           name="LandingScreen"
           component={LandingScreen}
+          options={{
+            headerShown: false,
+            
+          }}
+        />
+        <Stack.Screen
+          name="Loginpage"
+          component={LoginPage}
           options={{
             headerShown: false,
             

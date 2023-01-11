@@ -1,13 +1,12 @@
-// expo install expo-web-browser expo-auth-session expo-random
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View, Text, Image, Button } from 'react-native';
+import { StyleSheet, View, Text, Image, Button, ImageBackground } from 'react-native';
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
-
+import Unslapsh from '.././Images/unsplash.jpg'
 WebBrowser.maybeCompleteAuthSession();
 
-export default function LocationPage() {
+export default function LoginPage({navigation, route}) {
   const [accessToken, setAccessToken] = React.useState();
   const [userInfo, setUserInfo] = React.useState();
   const [message, setMessage] = React.useState();
@@ -40,6 +39,7 @@ export default function LocationPage() {
     if (userInfo) {
       return (
         <View style={styles.userInfo}>
+        
           <Image source={{uri: userInfo.picture}} style={styles.profilePic} />
           <Text>Welcome {userInfo.name}</Text>
           <Text>{userInfo.email}</Text>
@@ -50,23 +50,42 @@ export default function LocationPage() {
 
   return (
     <View style={styles.container}>
-      {showUserInfo()}
-      <Button 
-        title={accessToken ? "Get User Data" : "Login"}
-        onPress={accessToken ? getUserData : () => { promptAsync({useProxy: false, showInRecents: true}) }}
-      />
-      <StatusBar style="auto" />
+      <ImageBackground source={Unslapsh} style={styles.backgroundimg} blurRadius={4}  >
+        <Text style={{ display: "none" }}>{route.params.name}</Text>
+        {showUserInfo()}
+        <Text
+          style={{ color: "#FFFFFF", fontSize: 25, textAlign: 'center', marginVertical: 50, backgroundColor: "#660000", borderRadius: 50, paddingVertical: 13, marginHorizontal: 20 , paddingHorizontal:20}}
+          title={accessToken ? "Get User Data" : "Login"}
+          onPress={accessToken ? getUserData : () => {
+            promptAsync({ useProxy: false, showInRecents: true }),
+            navigation.navigate('addinfo', { name: 'cancel' })
+          }}
+        >Login with Google</Text>
+        <StatusBar style="auto" />
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+ 
+    backgroundColor:"black",
+    justifyContent:"center",
+    height:"100%",
+
   },
+  
+  backgroundimg:{
+    width:"100%",
+    resizeMode:'cover',
+    height:"100%",
+    display:"flex",
+    justifyContent:"flex-end"
+   
+   
+    
+},
   userInfo: {
     alignItems: 'center',
     justifyContent: 'center',

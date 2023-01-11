@@ -36,7 +36,12 @@ const ProfilePage = ({navigation}) => {
           <View style={styles.ViewPicPost}>
             <Image style={styles.PicPost} source={PostPictureOne} />
             <Image style={styles.PicPost} source={PostPictureTwo} />
-            <Image style={styles.PicPost} source={PostPictureThree} />
+           
+          </View>
+          <View style={styles.ViewPicPostsecond}>
+            <Image style={styles.PicPost} source={PostPictureOne} />
+            <Image style={styles.PicPost} source={PostPictureTwo} />
+           
           </View>
         </View>
       
@@ -91,8 +96,8 @@ const styles = StyleSheet.create({
     color: "#B0ACAC"
   },
   PicPost: {
-    width: 130,
-    height:104,
+    width: "50%",
+    height:105,
     marginHorizontal:7,
     resizeMode:'cover',
     borderRadius:5,
@@ -101,9 +106,21 @@ const styles = StyleSheet.create({
   ViewPicPost: {
    display:'flex',
    flexDirection:"row",
-   height:200,
-   marginVertical:50
-  }
+   height:100,
+   marginVertical:50,
+   maxwidth:'100%',
+   paddingHorizontal:10
+
+  },
+  ViewPicPostsecond: {
+    display:'flex',
+    flexDirection:"row",
+    height:200,
+    maxwidth:'100%',
+    paddingHorizontal:10,
+    marginBottom:80
+ 
+   }
 
 
 });
