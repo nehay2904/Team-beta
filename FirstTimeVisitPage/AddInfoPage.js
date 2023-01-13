@@ -1,10 +1,10 @@
 import { Image, StyleSheet, Text, TextInput, View, ScrollView, TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import ProfileLogo from '../Images/LogoTwo.png';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import axios from 'axios';
 import SelectBox from 'react-native-multi-selectbox'
-
+import * as Location from 'expo-location';
 
 const G_OPTIONS = [
   {
@@ -52,6 +52,31 @@ const D_OPTIONS = [
 
 
 const AddInfoPage = ({navigation, route}) => {
+
+const [location, setLocation] = useState(null);
+const [errorMsg, setErrorMsg] = useState(null);
+
+
+  useEffect(() => {
+  (async () => {
+    
+    let { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      setErrorMsg('Permission to access location was denied');
+      return;
+    }
+
+    let location = await Location.getCurrentPositionAsync({});
+    setLocation(location);
+  })();
+}, []);
+
+let text = 'Waiting..';
+if (errorMsg) {
+  text = errorMsg;
+} else if (location) {
+  text = JSON.stringify(location);
+}
 
   const [bio, setBio] = useState('')
   const [profession, setProfession] = useState('')
@@ -113,6 +138,7 @@ const AddInfoPage = ({navigation, route}) => {
           <TextInput style={styles.InputStyle} multiline placeholder='Tell me something about yourself' placeholderTextColor='gray' value={bio} onChange={(e) => {
             setBio(e.target.value)
           }} />
+
         </View>
         <View>
           <Text style={styles.TextsBio}>PROFESSION</Text>
@@ -163,11 +189,11 @@ const AddInfoPage = ({navigation, route}) => {
 
         </View>
         <View style={{ marginBottom: 50 }}>
-          <Text style={styles.Texts}>LOCATION ACCESS</Text>
+          {/* <Text style={styles.Texts}>LOCATION ACCESS</Text> */}
           <TouchableOpacity activeOpacity={0.6}>
-            <View style={styles.InputStyleLocation}  >
+            <View style={styles.InputStyleLocation}    >
               <Ionicons name='location-outline' color="white" size={20} style={{ marginTop: 7, marginLeft: 10 }} />
-              <Text style={{ color: 'white', marginTop: 10, marginHorizontal: 10 }}>Add Current Location</Text>
+              <TextInput style={{ color: 'white', marginTop: 10, marginHorizontal: 10 , marginBottom:10, height:20}} placeholder='Add Location' multiline placeholderTextColor='gray'></TextInput>
 
             </View>
           </TouchableOpacity>
@@ -243,7 +269,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     color: 'white',
     marginTop: 15
-
+    // display:"none"
   },
   styleinput: {
     color: 'white',
